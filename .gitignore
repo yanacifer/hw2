@@ -1,0 +1,35 @@
+st login: Sun Sep 17 19:58:56 on ttys000
+
+~/Desktop/ios-decal-proj1  master ✗ ✚
+» cd ..
+
+~/Desktop
+» ls
+07- Programmatic Design Continued.pptx
+160-fb
+E8KiZ.png
+Paige Plander Resume.pdf
+cs160
+ios-decal-hw2
+ios-decal-lab1
+
+
+*.DS_Store
+## User settings
+xcuserdata/
+*.xcuserstate
+## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
+*.xcscmblueprint
+*.xccheckout
+
+## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
+build/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+".gitignore" 20L, 405C
