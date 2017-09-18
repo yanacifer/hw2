@@ -4,7 +4,13 @@
 Monday, September 25th at 11:59pm
 
 ## overview ##
-In this project, you will be making an iOS application for the Hangman game. Users should be able to start a game, make guesses for a phrase (list of phrases provided), see their progresses toward the phrase, see a list of previously guessed, incorrect letters, see how many guesses they have left (indicated by a hangman image - basic images provided), be alerted of a win or loss, and start a new game.
+In this project, you will be making an iOS application for the Hangman game. Users should be able to: 
+- start a game, 
+- make guesses for a phrase (list of phrases provided), 
+- see their progress toward the phrase, see a list of previously guessed incorrect letters, 
+- see how many guesses they have left (indicated by a hangman image - basic images provided), 
+- be alerted of a win or loss, and 
+- start a new game.
 
 Though we do not have many requirements for this project, you are encouraged to customize your app. Here's a screenshot from a past project submission for some inspiration:
 
@@ -18,14 +24,16 @@ Begin by cloning the project repository onto your local computer:
 
 We have provided you code to interact with the list of locations in Berkeley (see **HangmanPhrases.swift**), but you will implement the rest of the features on your own. Add the following code to your code to generate a random  word (where you decide to add these lines is up to you!). 
 
-     let hangmanPhrases = HangmanPhrases()
+    let hangmanPhrases = HangmanPhrases()
      
-     // Generate a random phrase for the user to guess
-     let phrase: String = hangmanPhrases.getRandomPhrase()
-     print(phrase)
+    // Generate a random phrase for the user to guess
+    let phrase: String = hangmanPhrases.getRandomPhrase()
+    print(phrase)
+
+We've also provided some images for you to use in the **Assets.xcassets** folder (they're so boring though - you're encouraged to make your own!)
 
 ## requirements ##
-You **must** include all features listed under the "Hangman Game View" and "Finished Game States / Start New Game" sections. 
+You **must** include all features listed under the "Hangman Game View" and "finished Game States / start new game" sections. 
 
 ###  hangman game view ###
 * a UILabel that displays the "_"s corresponding to each word in the provided puzzle string
@@ -49,29 +57,15 @@ You **must** include all features listed under the "Hangman Game View" and "Fini
 
 
 ## tips for getting started ## 
-not sure where to begin? Here's one way you could break up the tasks
+Not sure where to begin? Here's one way you could break up the tasks (MVC):
 
-### creating the Model
-Though you can get away with putting all of your code in a view controller file for this assignment (it's not large in scale), we recommend you create a Model to contain your data structures / game logic / etc. To do this, create a new Swift file **HangmanGame.swift** (you can name it whatever you want). Some suggestions of what to add in here include:
-- a list holding the characters guessed by the user
-- the phrase the user is trying to guess
-- a function to determine whether or not the user is in a win state, in progress state, or lose state
-- a `guess` function that takes in a character and updates your data structures
-
-Note: none of these are required... this list is just to help you brainstorm!
-
-### creating the UI / configuring view controller
-- drag out a view controller from the object library in **Main.storyboard**, and create a corresponding view controller class (New > Cocoa Touch Class > subclass UIViewController) **HangmanViewController.swift**. Link these by setting the "Custom Class" of your View Controller in **Main.storyboard** to "HangmanViewController"
-- set up your UI in **Main.storyboard** (a `UIImageView` for the hangman image, `UILabel`s, `UIButton`s, etc.)
-- use AutoLayout to position your views. If creating a custom keyboard, you may find it helpful to nest your letter buttons in stack views (great exercise!) 
-- create outlets + actions from Storyboard to **HangmanViewController.swift**
-
-### linking your Model to your UI via your View Controller
-In your view controller swift file, create an instance of your Model:
-
-    let hangmanGame = HangmanGame()
-
-You can then use the public methods defined in your model to determine what should be displayed in your UI at each state of the game.
+1. create a model class (something like **HangmanGame.swift**). Put all of your data structures and game logic in here. 
+2. create your UI in **Main.storyboard**. This will involve first dragging out a view controller from the object library and then addding the required UI elements for the assignment.
+3. use autolayout to position your views
+4. create a subclass of UIViewController that appropriately updates your model class based off of user interaction. to do this, you'll need to:
+   - create an instance of your model class within your viewcontroller (as simple as declaring `let hangmanGame = HangmanGame()`.
+   - create outlets and actions from **Main.storyboard** to your view controller class
+   - within your IBActions, update your model accordingly (i.e.: the Start Over button should have an IBAction associated with it. Whenever the this IBAction gets called, you should reset all of your data structures (number of letters guessed, game state, etc.) in **HangmanGame.swift**
 
 ## grading and submission ##
 
