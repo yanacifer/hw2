@@ -67,7 +67,7 @@ To submit, add your hw2 folder to a private repository (if you don't have free p
 
 Using your private repository, submit your assignment to [Gradescope](https://gradescope.com/courses/9817/assignments/35309/). Please test that you uploaded correctly by downloading your submission, and testing that downloaded version in Xcode.
 
-##🔥 Autograder 🔥##
+## 🔥 Autograder 🔥 ##
 We're entering the pre-alpha release of our autograder. If you're willing, we would love for you to try it out. But first, we'll need to install CocoaPods, a dependency manager. CocoaPods is built with Ruby and it's installable with the default Ruby available on macOS (we'll be using CocoaPods later on in the class).
 
 ```
