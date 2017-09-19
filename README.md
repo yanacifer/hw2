@@ -17,9 +17,7 @@ Though we do not have many requirements for this project, you are encouraged to 
 ![alt text](/README-images/hangman.png)
 
 ## getting started ##
-Begin by cloning the project repository onto your local computer:
-
-    git clone https://github.com/iosdecal/ios-decal-proj1.git
+To submit, add your hw2 folder to a private repository. You can find detailed instructions on how to add your assignment to a repo [here](http://iosdecal.com/other_files/submission_instructions.pdf).
     
 We have provided you code to interact with the list of locations in Berkeley (see **HangmanPhrases.swift**), but you will implement the rest of the features on your own. Add the following code to your code to generate a random  word (where you decide to add these lines is up to you!). 
 
