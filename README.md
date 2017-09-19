@@ -1,6 +1,6 @@
-# hw2: hangman #
+# HW2: Hangman #
 
-## due ##
+## Due ##
 Monday, September 25th at 11:59pm
 
 ## overview ##

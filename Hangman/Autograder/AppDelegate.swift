@@ -8,10 +8,37 @@
 
 import UIKit
 
+private let swizzling: (AnyClass, Selector, Selector) -> () = { forClass, originalSelector, swizzledSelector in
+    let originalMethod = class_getInstanceMethod(forClass, originalSelector)!
+    let swizzledMethod = class_getInstanceMethod(forClass, swizzledSelector)!
+    method_exchangeImplementations(originalMethod, swizzledMethod)
+}
+
+extension HangmanPhrases {
+    
+    static let classInit: Void = {
+        let originalSelector = #selector(getRandomPhrase)
+        let swizzledSelector = #selector(swizzled_getRandomPhrase)
+        swizzling(HangmanPhrases.self, originalSelector, swizzledSelector)
+    }()
+    
+    // MARK: - Method Swizzling
+    
+    @objc dynamic func swizzled_getRandomPhrase() -> String {
+        return "LOL ITS ME"
+    }
+    
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    override init() {
+        super.init()
+        HangmanPhrases.classInit
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
