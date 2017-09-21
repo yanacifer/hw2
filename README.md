@@ -74,7 +74,13 @@ We're entering the pre-alpha release of our autograder. If you're willing, we wo
 sudo gem install cocoapods
 ```
 
-If you're having trouble, check [this](https://guides.cocoapods.org/using/troubleshooting#installing-cocoapods) guide out. Now all you have to do is run the command below within the directory the autograder is in:
+If you're having trouble, check [this](https://guides.cocoapods.org/using/troubleshooting#installing-cocoapods) guide out. We also have to set the location of the developer directory for the Xcode command line build tools. For the path, you can just drag the Xcode.app into the Terminal window.
+
+```
+xcode-select --switch <path/to/Xcode 9.app>
+``` 
+
+Now all you have to do is run the command below within the directory the autograder is in:
 
 ```
 python autograder.py
