@@ -37,7 +37,7 @@ You must create the following two files to pass the autograder (and to preserve 
 - **HangmanGame.swift** - model class for your game
 
 ### feature requirements
-###  hangman game view ###
+####  hangman game view ###
 1. a `UILabel` that displays the "_"s corresponding to each word in the provided puzzle string
 * a `UILabel` that lists the incorrect guesses thus far
 * a `UITextField` (where the user enters a letter as a guess). Users should only be able to guess one letter at a time. **If you decide to create a custom keyboard, this is not required**
@@ -46,12 +46,12 @@ You must create the following two files to pass the autograder (and to preserve 
 * if that letter does not appear in the puzzle string, that letter should be added to the label from the second bullet point to keep track of "Incorrect Guesses: ", and the Hangman image should update to represent the number of incorrect guesses
 * a `UIImageView` that represents the "state" of the Hangman, with appropriate images for each "state"
 
-### finished game states, start new game ###
+#### finished game states, start new game ###
 - a win state alert [(example)](https://medium.com/ios-os-x-development/how-to-use-uialertcontroller-in-swift-70143d7fbede) with an action titled "New Game" that restarts the game _after_ being pressed.
 - a game over state alert (no action requirement - feel free to do what you find best)
 - a "Start Over" button, which starts a new game
 
-### optional additions / features ###
+#### optional additions / features ###
 * A smart way for the user to guess letters (since a TextField for letter entry isn't ideal UX).
 * Customized design, including, but not limited to, custom images for the Hangman states
 * Anything else that you think will impress us or you think would be fun to implement!
