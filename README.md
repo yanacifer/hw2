@@ -1,7 +1,7 @@
 # HW2: Hangman #
 
 ## due ##
-Wednesday, September 27th at 11:59pm
+Friday, September 29th at 10pm (check Piazza for office hour times next week)
 
 ## overview ##
 In this project, you will be making an iOS application for the Hangman game. Users should be able to:
