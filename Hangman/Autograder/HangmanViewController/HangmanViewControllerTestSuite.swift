@@ -7,21 +7,13 @@
 //
 
 import XCTest
-@testable import Hangman
 import BKAutograder
-
-extension UITextField {
-    public func updateText(with string: String) {
-        self.text = string
-        BKRun()
-    }
-}
-
-
+@testable import Hangman
 
 class HangmanViewControllerTestSuite: BKTestSuite, BKAutogradable {
     
     var gradingFileName: String = "HangmanViewController"
+    var testingPhrase: String = "LOLITSME"
     var hangmanViewController: HangmanViewController!
     var branch: Int = BKBranchDirection.Neither.rawValue
     var hangmanImageView: UIImageView!
@@ -51,10 +43,10 @@ class HangmanViewControllerTestSuite: BKTestSuite, BKAutogradable {
         }
     }
     
-    private func guess(letter: String) {
+    private func guess(letter: String, file: StaticString = #file, line: UInt = #line) {
         switch BKBranchDirection(rawValue: branch)! {
         case .Left:
-            guessTextField.updateText(with: letter)
+            BKAssertTyping(letter, into: guessTextField, file: file, line: line)
         case .Right:
             BKSendAction(to: characterButtons[letter.first!]!)
         default: ()
@@ -68,7 +60,7 @@ class HangmanViewControllerTestSuite: BKTestSuite, BKAutogradable {
     }
     
     func testQ1PhraseLabel() {
-        let allowedCensorCharacters: [[String]] = [Array(repeating: "_", count: 8), Array(repeating: "-", count: 8)]
+        let allowedCensorCharacters: [[String]] = [Array(repeating: "_", count: testingPhrase.count), Array(repeating: "-", count: testingPhrase.count)]
         phraseLabel = BKAssertLabel(inSubviewsOf: hangmanViewController.view, contains: allowedCensorCharacters)
         initialPhraseText = currentPhraseText
     }
@@ -78,11 +70,11 @@ class HangmanViewControllerTestSuite: BKTestSuite, BKAutogradable {
             self.guessTextField = BKAssertInstance(from: self.hangmanViewController)
             BKBranchPassed(withDescription: "UITextField exists")
         }
-
+        
         let buttonImplementation: () -> Void = {
             self.otherButtons = []
             self.characterButtons = [:]
-
+            
             let buttons: [UIButton] = BKAssertAllInstances(inSubviewsOf: self.hangmanViewController.view, recursively: true)
             for button in buttons {
                 if let text = button.titleLabel?.text, text.count == 1, let character = text.first, character.isLetter() {
@@ -91,7 +83,7 @@ class HangmanViewControllerTestSuite: BKTestSuite, BKAutogradable {
                     self.otherButtons.append(button)
                 }
             }
-
+            
             BKAssertEqualUnordered(Character.uppercaseLetters, otherArray: Array(self.characterButtons.keys))
             BKBranchPassed(withDescription: "Custom UIButton input exists")
         }
@@ -102,11 +94,12 @@ class HangmanViewControllerTestSuite: BKTestSuite, BKAutogradable {
     func testQ3GuessButtonExists() {
         switch BKBranchDirection(rawValue: branch)! {
         case .Left:
-            self.guessButton = BKAssertButton(withLabelContaining: ["guess"], inSubviewsOf: self.hangmanViewController.view)
+            self.guessButton = BKAssertButton(withLabelContaining: [["guess"]], inSubviewsOf: self.hangmanViewController.view)
         case .Right:
             BKSendAction(to: characterButtons["U"]!)
-            self.guessButton = BKAssertButton(withLabelContaining: ["guess"], inSubviewsOf: self.hangmanViewController.view)
-        default: ()
+            self.guessButton = BKAssertButton(withLabelContaining: [["guess"]], inSubviewsOf: self.hangmanViewController.view)
+        default:
+            BKAssertFail()
         }
     }
     
@@ -208,7 +201,7 @@ class HangmanViewControllerTestSuite: BKTestSuite, BKAutogradable {
         
         alertController = presentedAlertController
     }
-
+    
     func testQ10NewGameAction() {
         let previousPhraseState = currentPhraseText
         let previousGuessesState = wrongGuessesLabel.text!
@@ -232,7 +225,7 @@ class HangmanViewControllerTestSuite: BKTestSuite, BKAutogradable {
     }
     
     func testQ11NewGameButton() {
-        newGameButton = BKAssertButton(withLabelContaining: ["new", "game"], inSubviewsOf: hangmanViewController.view)
+        newGameButton = BKAssertButton(withLabelContaining: [["new", "game"]], inSubviewsOf: hangmanViewController.view)
     }
     
     func testQ12NewGameButtonResetsGame() {
@@ -264,6 +257,20 @@ class HangmanViewControllerTestSuite: BKTestSuite, BKAutogradable {
     
 }
 
+
+// MARK: - Swizzler
+extension AppDelegate {
+    @objc func swizzler() {
+        BKSwizzler(originalClass: HangmanPhrases.self,
+                   method: #selector(HangmanPhrases.getRandomPhrase),
+                   toClass: AppDelegate.self,
+                   swizzledMethod: #selector(swizzled))
+    }
+    
+    @objc dynamic func swizzled() -> String {
+        return "LOLITSME"
+    }
+}
 
 
 

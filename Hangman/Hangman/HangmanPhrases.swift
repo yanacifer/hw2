@@ -18,7 +18,11 @@ class HangmanPhrases {
         phrases = NSArray.init(contentsOfFile: path!)
     }
     
-    // Get random phrase from all available phrases
+    // Get random phrase from all available phrases.
+    // Ah, noticed the weird `@objc dynamic` prefix?
+    // You can (and should) ignore that for now. But if you're curious, `@objc` exposes the Swift method
+    // to the Objective-C runtime, whereas the `dynamic` keyword tells the Swift runtime to use dynamic
+    // dispatch instead of static (e.g. These keywords are necessary for the autograder to work).
     @objc dynamic func getRandomPhrase() -> String {
         let index = Int(arc4random_uniform(UInt32(phrases.count)))
         return phrases.object(at: index) as! String

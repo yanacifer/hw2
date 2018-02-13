@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C6B904AC36F60558B559A45 /* HangmanViewControllerTestSuite.csv in Resources */ = {isa = PBXBuildFile; fileRef = EF1B065A85C1613174A6F22F /* HangmanViewControllerTestSuite.csv */; };
-		446DEEC5C7BF62650DDC866F /* BKAutograder.framework in Copy Autograder */ = {isa = PBXBuildFile; fileRef = 0832620AB91D0B7340776C3C /* BKAutograder.framework */; };
+		140C8F04202D298200F834A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140C8F03202D298200F834A2 /* AppDelegate.swift */; };
+		140C8F05202D2B0400F834A2 /* HangmanViewControllerTestSuite.csv in Resources */ = {isa = PBXBuildFile; fileRef = EF1B065A85C1613174A6F22F /* HangmanViewControllerTestSuite.csv */; };
+		14B916D82032D65C00C61700 /* BKAutograder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B916D72032D65C00C61700 /* BKAutograder.framework */; };
+		14B916DF2032D70800C61700 /* BKAutograder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B916D72032D65C00C61700 /* BKAutograder.framework */; };
+		14B916E02032D70800C61700 /* BKAutograder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14B916D72032D65C00C61700 /* BKAutograder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		56D2EBFA03D99395D4374D58 /* Main.storyboard in Copy Storyboard */ = {isa = PBXBuildFile; fileRef = ECC22F461C89177600749E58 /* Main.storyboard */; };
 		7C9D5E8F024131268C3F5629 /* HangmanViewControllerTestSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E826C863C99A9C2362C9E83 /* HangmanViewControllerTestSuite.swift */; };
-		8410DBA840E6537C85EF0E19 /* BKAutograder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0832620AB91D0B7340776C3C /* BKAutograder.framework */; };
-		ECC22F431C89177600749E58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC22F421C89177600749E58 /* AppDelegate.swift */; };
 		ECC22F481C89177600749E58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC22F461C89177600749E58 /* Main.storyboard */; };
 		ECC22F4A1C89177600749E58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC22F491C89177600749E58 /* Assets.xcassets */; };
 		ECC22F4D1C89177600749E58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC22F4B1C89177600749E58 /* LaunchScreen.storyboard */; };
@@ -31,15 +32,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		08B7A082CC5E616462D1353E /* Copy Autograder */ = {
+		14B916E22032D70800C61700 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				446DEEC5C7BF62650DDC866F /* BKAutograder.framework in Copy Autograder */,
+				14B916E02032D70800C61700 /* BKAutograder.framework in Embed Frameworks */,
 			);
-			name = "Copy Autograder";
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		478428BF044607DB6374F7A7 /* Copy Storyboard */ = {
@@ -57,11 +58,11 @@
 
 /* Begin PBXFileReference section */
 		0091E0332471921B63EBAD48 /* Autograder.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Autograder.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0832620AB91D0B7340776C3C /* BKAutograder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BKAutograder.framework; path = Autograder/Frameworks/BKAutograder.framework; sourceTree = "<group>"; };
 		0E826C863C99A9C2362C9E83 /* HangmanViewControllerTestSuite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HangmanViewControllerTestSuite.swift; sourceTree = "<group>"; };
+		140C8F03202D298200F834A2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14B916D72032D65C00C61700 /* BKAutograder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BKAutograder.framework; path = Autograder/Frameworks/BKAutograder.framework; sourceTree = "<group>"; };
 		2E56F61F767E8DBFF7B36FF9 /* Autograder.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Autograder.xcconfig; sourceTree = "<group>"; };
 		ECC22F3F1C89177600749E58 /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ECC22F421C89177600749E58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECC22F471C89177600749E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECC22F491C89177600749E58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECC22F4C1C89177600749E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,28 +73,37 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4AD4AA162596778925E58DD5 /* Frameworks */ = {
+		1468FEE4202CC88D00FF7B0B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8410DBA840E6537C85EF0E19 /* BKAutograder.framework in Frameworks */,
+				14B916D82032D65C00C61700 /* BKAutograder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ECC22F3C1C89177600749E58 /* Frameworks */ = {
+		14B916E12032D70800C61700 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14B916DF2032D70800C61700 /* BKAutograder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		143398EE202CDBDD00ADA025 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14B916D72032D65C00C61700 /* BKAutograder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6CAA6A4C1E2B1CCA009392E6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				ECC22F421C89177600749E58 /* AppDelegate.swift */,
+				140C8F03202D298200F834A2 /* AppDelegate.swift */,
 				ECC22F4B1C89177600749E58 /* LaunchScreen.storyboard */,
 				ECC22F4E1C89177600749E58 /* Info.plist */,
 			);
@@ -109,21 +119,13 @@
 			path = Autograder;
 			sourceTree = "<group>";
 		};
-		CE7BF5115EF2A39C3F871E34 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0832620AB91D0B7340776C3C /* BKAutograder.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		ECC22F361C89177600749E58 = {
 			isa = PBXGroup;
 			children = (
 				ECC22F411C89177600749E58 /* Hangman */,
 				ECC22F401C89177600749E58 /* Products */,
 				859A67E7095E95F8C16E2B58 /* Autograder */,
-				CE7BF5115EF2A39C3F871E34 /* Frameworks */,
+				143398EE202CDBDD00ADA025 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,8 +193,7 @@
 				C163D065660BE0BAA54A62D7 /* Resources */,
 				DB63D8BDD2FDE74F3A7D4AD9 /* Sources */,
 				478428BF044607DB6374F7A7 /* Copy Storyboard */,
-				08B7A082CC5E616462D1353E /* Copy Autograder */,
-				4AD4AA162596778925E58DD5 /* Frameworks */,
+				1468FEE4202CC88D00FF7B0B /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -209,8 +210,9 @@
 			buildConfigurationList = ECC22F671C89177600749E58 /* Build configuration list for PBXNativeTarget "Hangman" */;
 			buildPhases = (
 				ECC22F3B1C89177600749E58 /* Sources */,
-				ECC22F3C1C89177600749E58 /* Frameworks */,
 				ECC22F3D1C89177600749E58 /* Resources */,
+				14B916E12032D70800C61700 /* Frameworks */,
+				14B916E22032D70800C61700 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -228,11 +230,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "iOS DeCal";
 				TargetAttributes = {
+					5D59164512804F6AF2F5772C = {
+						ProvisioningStyle = Manual;
+					};
 					ECC22F3E1C89177600749E58 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 9V456WSURS;
 						LastSwiftMigration = 0900;
 					};
 				};
@@ -261,7 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C6B904AC36F60558B559A45 /* HangmanViewControllerTestSuite.csv in Resources */,
+				140C8F05202D2B0400F834A2 /* HangmanViewControllerTestSuite.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,8 +297,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECC22F431C89177600749E58 /* AppDelegate.swift in Sources */,
 				ECC22F7E1C891CF800749E58 /* HangmanPhrases.swift in Sources */,
+				140C8F04202D298200F834A2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +337,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hangman.app/Hangman";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -340,19 +348,94 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
 		};
-		ABA413115DF6C5426DF197E5 /* Debug */ = {
+		143398F0202CDCAD00ADA025 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"TEST=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = TEST;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Test;
+		};
+		143398F1202CDCAD00ADA025 /* Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9V456WSURS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Autograder/Frameworks",
+				);
+				INFOPLIST_FILE = Hangman/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosdecal.Hangman;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Test;
+		};
+		143398F2202CDCAD00ADA025 /* Test */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2E56F61F767E8DBFF7B36FF9 /* Autograder.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hangman.app/Hangman";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -361,7 +444,30 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Test;
+		};
+		ABA413115DF6C5426DF197E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E56F61F767E8DBFF7B36FF9 /* Autograder.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hangman.app/Hangman";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Autograder/Frameworks",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -414,6 +520,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -461,6 +568,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -473,11 +581,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9V456WSURS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Autograder/Frameworks",
+				);
 				INFOPLIST_FILE = Hangman/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iosdecal.Hangman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -485,11 +599,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9V456WSURS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Autograder/Frameworks",
+				);
 				INFOPLIST_FILE = Hangman/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iosdecal.Hangman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -500,28 +620,31 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ECC22F651C89177600749E58 /* Debug */,
+				143398F0202CDCAD00ADA025 /* Test */,
 				ECC22F661C89177600749E58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		ECC22F671C89177600749E58 /* Build configuration list for PBXNativeTarget "Hangman" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ECC22F681C89177600749E58 /* Debug */,
+				143398F1202CDCAD00ADA025 /* Test */,
 				ECC22F691C89177600749E58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		FADA73339515D322C880E3C6 /* Build configuration list for PBXNativeTarget "Autograder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				02A047360702DFD864B87321 /* Release */,
 				ABA413115DF6C5426DF197E5 /* Debug */,
+				143398F2202CDCAD00ADA025 /* Test */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
