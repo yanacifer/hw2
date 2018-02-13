@@ -68,4 +68,5 @@ To submit, add your hw2 folder to a private repository (if you don't have free p
 Using your private repository, submit your assignment to [Gradescope](https://www.gradescope.com). Please test that you uploaded correctly by downloading your submission, and testing that downloaded version in Xcode.
 
 ## 🔥 Autograder 🔥 ##
+![Autograder gif](./README-images/autograder.gif)
 We're entering the pre-alpha release of our autograder. If you're willing, we would love for you to try it out! It'll be released later this week, so until then [...](https://giphy.com/gifs/mrw-reddit-comment-tJeGZumxDB01q/fullscreen).
