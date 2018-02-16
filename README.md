@@ -69,4 +69,5 @@ Using your private repository, submit your assignment to [Gradescope](https://ww
 
 ## 🔥 Autograder 🔥 ##
 ![Autograder gif](./README-images/autograder.gif)
+
 We're entering the pre-alpha release of our autograder. If you're willing, we would love for you to try it out! [It'll be released later this week](https://giphy.com/gifs/mrw-reddit-comment-tJeGZumxDB01q/fullscreen).
