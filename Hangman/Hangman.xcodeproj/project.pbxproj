@@ -10,7 +10,6 @@
 		140C8F04202D298200F834A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140C8F03202D298200F834A2 /* AppDelegate.swift */; };
 		140C8F05202D2B0400F834A2 /* HangmanViewControllerTestSuite.csv in Resources */ = {isa = PBXBuildFile; fileRef = EF1B065A85C1613174A6F22F /* HangmanViewControllerTestSuite.csv */; };
 		14B916D82032D65C00C61700 /* BKAutograder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B916D72032D65C00C61700 /* BKAutograder.framework */; };
-		14B916DF2032D70800C61700 /* BKAutograder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B916D72032D65C00C61700 /* BKAutograder.framework */; };
 		14B916E02032D70800C61700 /* BKAutograder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14B916D72032D65C00C61700 /* BKAutograder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		56D2EBFA03D99395D4374D58 /* Main.storyboard in Copy Storyboard */ = {isa = PBXBuildFile; fileRef = ECC22F461C89177600749E58 /* Main.storyboard */; };
 		7C9D5E8F024131268C3F5629 /* HangmanViewControllerTestSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E826C863C99A9C2362C9E83 /* HangmanViewControllerTestSuite.swift */; };
@@ -78,14 +77,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				14B916D82032D65C00C61700 /* BKAutograder.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		14B916E12032D70800C61700 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14B916DF2032D70800C61700 /* BKAutograder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +202,6 @@
 			buildPhases = (
 				ECC22F3B1C89177600749E58 /* Sources */,
 				ECC22F3D1C89177600749E58 /* Resources */,
-				14B916E12032D70800C61700 /* Frameworks */,
 				14B916E22032D70800C61700 /* Embed Frameworks */,
 			);
 			buildRules = (
