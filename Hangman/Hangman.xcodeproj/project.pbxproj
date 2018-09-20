@@ -8,27 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		140C8F04202D298200F834A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140C8F03202D298200F834A2 /* AppDelegate.swift */; };
-		140C8F05202D2B0400F834A2 /* HangmanViewControllerTestSuite.csv in Resources */ = {isa = PBXBuildFile; fileRef = EF1B065A85C1613174A6F22F /* HangmanViewControllerTestSuite.csv */; };
-		14B916D82032D65C00C61700 /* BKAutograder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B916D72032D65C00C61700 /* BKAutograder.framework */; };
-		14B916E02032D70800C61700 /* BKAutograder.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14B916D72032D65C00C61700 /* BKAutograder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		56D2EBFA03D99395D4374D58 /* Main.storyboard in Copy Storyboard */ = {isa = PBXBuildFile; fileRef = ECC22F461C89177600749E58 /* Main.storyboard */; };
-		7C9D5E8F024131268C3F5629 /* HangmanViewControllerTestSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E826C863C99A9C2362C9E83 /* HangmanViewControllerTestSuite.swift */; };
 		ECC22F481C89177600749E58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC22F461C89177600749E58 /* Main.storyboard */; };
 		ECC22F4A1C89177600749E58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC22F491C89177600749E58 /* Assets.xcassets */; };
 		ECC22F4D1C89177600749E58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC22F4B1C89177600749E58 /* LaunchScreen.storyboard */; };
 		ECC22F7C1C891A6700749E58 /* phrases.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECC22F7B1C891A6700749E58 /* phrases.plist */; };
 		ECC22F7E1C891CF800749E58 /* HangmanPhrases.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC22F7D1C891CF800749E58 /* HangmanPhrases.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		096CD9744146D39268CA829B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ECC22F371C89177600749E58 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = ECC22F3E1C89177600749E58;
-			remoteInfo = Hangman;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		14B916E22032D70800C61700 /* Embed Frameworks */ = {
@@ -37,30 +22,14 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				14B916E02032D70800C61700 /* BKAutograder.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		478428BF044607DB6374F7A7 /* Copy Storyboard */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = ..;
-			dstSubfolderSpec = 7;
-			files = (
-				56D2EBFA03D99395D4374D58 /* Main.storyboard in Copy Storyboard */,
-			);
-			name = "Copy Storyboard";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0091E0332471921B63EBAD48 /* Autograder.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Autograder.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E826C863C99A9C2362C9E83 /* HangmanViewControllerTestSuite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HangmanViewControllerTestSuite.swift; sourceTree = "<group>"; };
 		140C8F03202D298200F834A2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		14B916D72032D65C00C61700 /* BKAutograder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BKAutograder.framework; path = Autograder/Frameworks/BKAutograder.framework; sourceTree = "<group>"; };
-		2E56F61F767E8DBFF7B36FF9 /* Autograder.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Autograder.xcconfig; sourceTree = "<group>"; };
 		ECC22F3F1C89177600749E58 /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC22F471C89177600749E58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECC22F491C89177600749E58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,29 +37,9 @@
 		ECC22F4E1C89177600749E58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECC22F7B1C891A6700749E58 /* phrases.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = phrases.plist; sourceTree = "<group>"; };
 		ECC22F7D1C891CF800749E58 /* HangmanPhrases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HangmanPhrases.swift; sourceTree = "<group>"; };
-		EF1B065A85C1613174A6F22F /* HangmanViewControllerTestSuite.csv */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = HangmanViewControllerTestSuite.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFrameworksBuildPhase section */
-		1468FEE4202CC88D00FF7B0B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14B916D82032D65C00C61700 /* BKAutograder.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
 /* Begin PBXGroup section */
-		143398EE202CDBDD00ADA025 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				14B916D72032D65C00C61700 /* BKAutograder.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		6CAA6A4C1E2B1CCA009392E6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,22 +50,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		859A67E7095E95F8C16E2B58 /* Autograder */ = {
-			isa = PBXGroup;
-			children = (
-				2E56F61F767E8DBFF7B36FF9 /* Autograder.xcconfig */,
-				F89E3E664335D141C4F36047 /* HangmanViewController */,
-			);
-			path = Autograder;
-			sourceTree = "<group>";
-		};
 		ECC22F361C89177600749E58 = {
 			isa = PBXGroup;
 			children = (
 				ECC22F411C89177600749E58 /* Hangman */,
 				ECC22F401C89177600749E58 /* Products */,
-				859A67E7095E95F8C16E2B58 /* Autograder */,
-				143398EE202CDBDD00ADA025 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				ECC22F3F1C89177600749E58 /* Hangman.app */,
-				0091E0332471921B63EBAD48 /* Autograder.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,37 +102,9 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		F89E3E664335D141C4F36047 /* HangmanViewController */ = {
-			isa = PBXGroup;
-			children = (
-				EF1B065A85C1613174A6F22F /* HangmanViewControllerTestSuite.csv */,
-				0E826C863C99A9C2362C9E83 /* HangmanViewControllerTestSuite.swift */,
-			);
-			path = HangmanViewController;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5D59164512804F6AF2F5772C /* Autograder */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FADA73339515D322C880E3C6 /* Build configuration list for PBXNativeTarget "Autograder" */;
-			buildPhases = (
-				C163D065660BE0BAA54A62D7 /* Resources */,
-				DB63D8BDD2FDE74F3A7D4AD9 /* Sources */,
-				478428BF044607DB6374F7A7 /* Copy Storyboard */,
-				1468FEE4202CC88D00FF7B0B /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E0DB10463137D4CDEA2CC46A /* PBXTargetDependency */,
-			);
-			name = Autograder;
-			productName = Autograder;
-			productReference = 0091E0332471921B63EBAD48 /* Autograder.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		ECC22F3E1C89177600749E58 /* Hangman */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECC22F671C89177600749E58 /* Build configuration list for PBXNativeTarget "Hangman" */;
@@ -220,12 +129,9 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "iOS DeCal";
 				TargetAttributes = {
-					5D59164512804F6AF2F5772C = {
-						ProvisioningStyle = Manual;
-					};
 					ECC22F3E1C89177600749E58 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 9V456WSURS;
@@ -247,20 +153,11 @@
 			projectRoot = "";
 			targets = (
 				ECC22F3E1C89177600749E58 /* Hangman */,
-				5D59164512804F6AF2F5772C /* Autograder */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C163D065660BE0BAA54A62D7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				140C8F05202D2B0400F834A2 /* HangmanViewControllerTestSuite.csv in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		ECC22F3D1C89177600749E58 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -275,14 +172,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DB63D8BDD2FDE74F3A7D4AD9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7C9D5E8F024131268C3F5629 /* HangmanViewControllerTestSuite.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		ECC22F3B1C89177600749E58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -293,15 +182,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E0DB10463137D4CDEA2CC46A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Hangman;
-			target = ECC22F3E1C89177600749E58 /* Hangman */;
-			targetProxy = 096CD9744146D39268CA829B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		ECC22F461C89177600749E58 /* Main.storyboard */ = {
@@ -323,28 +203,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		02A047360702DFD864B87321 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hangman.app/Hangman";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Autograder/Frameworks",
-				);
-				GCC_NO_COMMON_BLOCKS = YES;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Release;
-		};
 		143398F0202CDCAD00ADA025 /* Test */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -357,12 +215,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -390,8 +250,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -419,52 +278,6 @@
 			};
 			name = Test;
 		};
-		143398F2202CDCAD00ADA025 /* Test */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E56F61F767E8DBFF7B36FF9 /* Autograder.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hangman.app/Hangman";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Autograder/Frameworks",
-				);
-				GCC_NO_COMMON_BLOCKS = YES;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Test;
-		};
-		ABA413115DF6C5426DF197E5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E56F61F767E8DBFF7B36FF9 /* Autograder.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hangman.app/Hangman";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Autograder/Frameworks",
-				);
-				GCC_NO_COMMON_BLOCKS = YES;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
 		ECC22F651C89177600749E58 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -477,12 +290,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -509,8 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -531,12 +345,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -557,8 +373,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -622,16 +437,6 @@
 				ECC22F681C89177600749E58 /* Debug */,
 				143398F1202CDCAD00ADA025 /* Test */,
 				ECC22F691C89177600749E58 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		FADA73339515D322C880E3C6 /* Build configuration list for PBXNativeTarget "Autograder" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				02A047360702DFD864B87321 /* Release */,
-				ABA413115DF6C5426DF197E5 /* Debug */,
-				143398F2202CDCAD00ADA025 /* Test */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
