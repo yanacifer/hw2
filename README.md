@@ -1,7 +1,7 @@
 # HW2: Hangman #
 
 ## due ##
-Monday, February 19th at 11:59pm (weekly OH will be announced this week)
+Monday, October 1st at 11:59pm 
 
 ## overview ##
 In this project, you will be making an iOS application for the Hangman game. Users should be able to:
