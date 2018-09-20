@@ -66,8 +66,9 @@ If you complete all of the required features you will get full credit. We will d
 To submit, add your hw2 folder to a private repository (if you don't have free private repositories, get them here with the [github student developer pack](https://education.github.com/pack)). If you're new to GitHub, you can find detailed instructions on how to add your assignment to a repo [here](http://iosdecal.com/other_files/submission_instructions.pdf).
 
 Using your private repository, submit your assignment to [Gradescope](https://www.gradescope.com). Please test that you uploaded correctly by downloading your submission, and testing that downloaded version in Xcode.
-
+<!---
 ## 🔥 Autograder 🔥 ##
 ![Autograder gif](./README-images/autograder.gif)
 
 We're entering the pre-alpha release of our autograder. If you're willing, we would love for you to try it out! [It'll be released later this week](https://giphy.com/gifs/mrw-reddit-comment-tJeGZumxDB01q/fullscreen).
+-->
