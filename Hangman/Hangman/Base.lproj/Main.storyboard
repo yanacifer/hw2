@@ -1,11 +1,680 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="3nT-C2-ijR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--HangmanViewController-->
+        <scene sceneID="sZf-Uu-MNQ">
+            <objects>
+                <viewController title="HangmanViewController" id="3nT-C2-ijR" customClass="HangmanViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yWr-HV-MRc"/>
+                        <viewControllerLayoutGuide type="bottom" id="FLh-fG-YBU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2K0-Kt-4aW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tfe-4t-Vbr">
+                                <rect key="frame" x="16" y="411.5" width="343" height="44"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WEt-dw-rC5" userLabel="Underscores">
+                                        <rect key="frame" x="156" y="5" width="31" height="29"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxF-iE-GYy">
+                                                <rect key="frame" x="0.0" y="0.0" width="10.5" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtV-xW-oZA">
+                                                <rect key="frame" x="20.5" y="0.0" width="10.5" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Ps-oH-Crq" userLabel="Word">
+                                        <rect key="frame" x="160" y="15" width="24" height="14.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoG-Ak-M13">
+                                                <rect key="frame" x="0.0" y="0.0" width="7" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9S-yH-Xa0">
+                                                <rect key="frame" x="17" y="0.0" width="7" height="14.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="7Ps-oH-Crq" firstAttribute="centerX" secondItem="Tfe-4t-Vbr" secondAttribute="centerX" id="80b-kB-Cfi"/>
+                                    <constraint firstItem="WEt-dw-rC5" firstAttribute="centerY" secondItem="Tfe-4t-Vbr" secondAttribute="centerY" constant="-3" id="CRY-th-bww"/>
+                                    <constraint firstItem="7Ps-oH-Crq" firstAttribute="centerY" secondItem="Tfe-4t-Vbr" secondAttribute="centerY" id="TaF-5z-4ZR"/>
+                                    <constraint firstAttribute="height" constant="44" id="ggX-cO-tXV"/>
+                                    <constraint firstItem="WEt-dw-rC5" firstAttribute="centerX" secondItem="Tfe-4t-Vbr" secondAttribute="centerX" id="or7-FT-1je"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="tgN-hw-eMb" userLabel="Keyboard">
+                                <rect key="frame" x="16" y="465.5" width="343" height="191.5"/>
+                                <subviews>
+                                    <view contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="xsu-l6-seu">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="68d-Fz-Wod">
+                                                <rect key="frame" x="78" y="0.0" width="242" height="43.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWs-Nr-EfZ" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="43" height="43.5"/>
+                                                        <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="OWs-Nr-EfZ" secondAttribute="height" multiplier="1:1" id="Dpf-iA-d4u"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <state key="normal" title="B">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="uny-HY-pDB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AF-us-vlf" userLabel="c" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                        <rect key="frame" x="49" y="0.0" width="44" height="43.5"/>
+                                                        <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="4AF-us-vlf" secondAttribute="height" multiplier="1:1" id="q1t-54-jI7"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <state key="normal" title="C">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="PF7-rN-YMZ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vam-U2-zPk" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                        <rect key="frame" x="99" y="0.0" width="44" height="43.5"/>
+                                                        <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Vam-U2-zPk" secondAttribute="height" multiplier="1:1" id="auq-MW-AgD"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <state key="normal" title="D">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="EhJ-Ec-sDF"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHc-Ye-5ng" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                        <rect key="frame" x="149" y="0.0" width="44" height="43.5"/>
+                                                        <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="CHc-Ye-5ng" secondAttribute="height" multiplier="1:1" id="LHn-mq-tGL"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <state key="normal" title="E">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="aic-EO-KRJ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgM-dm-Hfg" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                        <rect key="frame" x="199" y="0.0" width="43" height="43.5"/>
+                                                        <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="xgM-dm-Hfg" secondAttribute="height" multiplier="1:1" id="SH1-kv-mzp"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <state key="normal" title="F">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="7RF-Ii-Zeb"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBi-IK-BHr" userLabel="A" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                <rect key="frame" x="26" y="0.0" width="44" height="43.5"/>
+                                                <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="aBi-IK-BHr" secondAttribute="height" multiplier="1:1" id="faf-DJ-CYA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" red="0.9951923077" green="0.9903846154" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="MfG-VJ-yHU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="68d-Fz-Wod" firstAttribute="centerX" secondItem="xsu-l6-seu" secondAttribute="centerX" constant="28" id="3Ee-se-jTf"/>
+                                            <constraint firstItem="68d-Fz-Wod" firstAttribute="centerY" secondItem="xsu-l6-seu" secondAttribute="centerY" id="EEG-JH-CXP"/>
+                                            <constraint firstItem="aBi-IK-BHr" firstAttribute="bottom" secondItem="68d-Fz-Wod" secondAttribute="bottom" id="JQH-DA-otZ"/>
+                                            <constraint firstItem="aBi-IK-BHr" firstAttribute="leading" secondItem="xsu-l6-seu" secondAttribute="leading" constant="26" id="m4f-RT-Duf"/>
+                                            <constraint firstItem="aBi-IK-BHr" firstAttribute="top" secondItem="68d-Fz-Wod" secondAttribute="top" id="wLh-IM-3gw"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="0wT-gh-8Ik">
+                                        <rect key="frame" x="0.0" y="49.5" width="343" height="43.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cej-l8-jl4" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="44" height="43.5"/>
+                                                <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="G">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="E4s-Bg-fet"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6V-FG-szC" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                <rect key="frame" x="50" y="0.0" width="43.5" height="43.5"/>
+                                                <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="H">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="YEK-Aj-JZ9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UA2-qe-Yzx" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                <rect key="frame" x="99.5" y="0.0" width="44" height="43.5"/>
+                                                <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="I">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="Abo-cz-LRV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDg-uv-syU" userLabel="J" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                <rect key="frame" x="149.5" y="0.0" width="44" height="43.5"/>
+                                                <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="J">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="SQr-JM-cbz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7Z-7m-KDx" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                <rect key="frame" x="199.5" y="0.0" width="44" height="43.5"/>
+                                                <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="K">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="NeX-qh-Hl5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBc-bs-7Gv" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                <rect key="frame" x="249.5" y="0.0" width="43.5" height="43.5"/>
+                                                <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="L">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="1yp-ms-YBQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fsa-dj-JJL" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                <rect key="frame" x="299" y="0.0" width="44" height="43.5"/>
+                                                <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="M">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="TPD-Ju-JUd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="FeJ-CV-TWi">
+                                        <rect key="frame" x="0.0" y="99" width="343" height="43"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhj-ru-AxC" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="44" height="43"/>
+                                                <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="N">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="MTW-Sc-kSt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8v-R4-ECh" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                <rect key="frame" x="50" y="0.0" width="43.5" height="43"/>
+                                                <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="O">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="gmV-fZ-Ssm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qys-K1-XBE" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                <rect key="frame" x="99.5" y="0.0" width="44" height="43"/>
+                                                <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Qys-K1-XBE" secondAttribute="height" multiplier="1:1" id="gDM-HL-P5z"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="P">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="16s-KV-GxO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBE-tz-zwJ" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                <rect key="frame" x="149.5" y="0.0" width="44" height="43"/>
+                                                <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="cBE-tz-zwJ" secondAttribute="height" multiplier="1:1" id="3uh-Dl-DyX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="Q">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="F8T-Hw-GVB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtH-Dc-3fH" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                <rect key="frame" x="199.5" y="0.0" width="44" height="43"/>
+                                                <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="R">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="ctX-Tj-FlY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRn-ib-0Cx" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                <rect key="frame" x="249.5" y="0.0" width="43.5" height="43"/>
+                                                <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="S">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="9ra-KL-epP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l7q-w6-XjH" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                <rect key="frame" x="299" y="0.0" width="44" height="43"/>
+                                                <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="T">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="7"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="4VH-NS-xC7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="top" translatesAutoresizingMaskIntoConstraints="NO" id="jL5-bY-Af4">
+                                        <rect key="frame" x="0.0" y="148" width="343" height="43.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="aJU-an-DzY">
+                                                <rect key="frame" x="26" y="0.5" width="292" height="44"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ViP-fG-Ok2" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                                        <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="ViP-fG-Ok2" secondAttribute="height" multiplier="1:1" id="vg4-Km-jMc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <state key="normal" title="U">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="bnM-gp-UGQ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fip-9G-pgc" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                        <rect key="frame" x="50" y="0.0" width="43" height="44"/>
+                                                        <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Fip-9G-pgc" secondAttribute="height" multiplier="1:1" id="rhK-rH-Udw"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <state key="normal" title="V">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="p77-ho-GaM"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOH-h7-8RX" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                        <rect key="frame" x="99" y="0.0" width="44" height="44"/>
+                                                        <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="tOH-h7-8RX" secondAttribute="height" multiplier="1:1" id="kZF-BP-Vp1"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <state key="normal" title="W">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="r7z-HJ-Vl4"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFH-Lx-wrc" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                        <rect key="frame" x="149" y="0.0" width="44" height="44"/>
+                                                        <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="XFH-Lx-wrc" secondAttribute="height" multiplier="1:1" id="7dV-rY-jbO"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <state key="normal" title="X">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="2UT-AH-hRZ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHj-QV-SNX" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                        <rect key="frame" x="199" y="0.0" width="43" height="44"/>
+                                                        <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="gHj-QV-SNX" secondAttribute="height" multiplier="1:1" id="4BX-fp-Lnr"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <state key="normal" title="Y">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="Kea-xV-Bju"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iW-8Q-n9d" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                                        <rect key="frame" x="248" y="0.0" width="44" height="44"/>
+                                                        <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="1iW-8Q-n9d" secondAttribute="height" multiplier="1:1" id="9Os-XK-jXT"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <state key="normal" title="Z">
+                                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="7"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="pVL-AZ-a5b"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="aJU-an-DzY" firstAttribute="centerX" secondItem="jL5-bY-Af4" secondAttribute="centerX" id="X5O-u5-60C"/>
+                                            <constraint firstItem="aJU-an-DzY" firstAttribute="centerY" secondItem="jL5-bY-Af4" secondAttribute="centerY" id="xO2-7L-HiP"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ViP-fG-Ok2" firstAttribute="width" secondItem="Cej-l8-jl4" secondAttribute="width" id="1Gx-Gm-EPw"/>
+                                    <constraint firstItem="xgM-dm-Hfg" firstAttribute="width" secondItem="Cej-l8-jl4" secondAttribute="width" id="2Jn-c8-bUc"/>
+                                    <constraint firstItem="4AF-us-vlf" firstAttribute="width" secondItem="Cej-l8-jl4" secondAttribute="width" id="DCA-Ub-JvF"/>
+                                    <constraint firstItem="XFH-Lx-wrc" firstAttribute="width" secondItem="Cej-l8-jl4" secondAttribute="width" id="Ej7-Kw-pNx"/>
+                                    <constraint firstItem="tOH-h7-8RX" firstAttribute="width" secondItem="Cej-l8-jl4" secondAttribute="width" id="VkO-IO-Mae"/>
+                                    <constraint firstItem="1iW-8Q-n9d" firstAttribute="width" secondItem="Cej-l8-jl4" secondAttribute="width" id="alK-WZ-yWn"/>
+                                    <constraint firstItem="Fip-9G-pgc" firstAttribute="width" secondItem="Cej-l8-jl4" secondAttribute="width" id="bzh-Z3-T2M"/>
+                                    <constraint firstItem="Vam-U2-zPk" firstAttribute="width" secondItem="Cej-l8-jl4" secondAttribute="width" id="l16-h2-LVg"/>
+                                    <constraint firstItem="OWs-Nr-EfZ" firstAttribute="width" secondItem="Cej-l8-jl4" secondAttribute="width" id="r5d-t1-W3w"/>
+                                    <constraint firstItem="gHj-QV-SNX" firstAttribute="width" secondItem="Cej-l8-jl4" secondAttribute="width" id="ugi-O4-jFU"/>
+                                    <constraint firstItem="CHc-Ye-5ng" firstAttribute="width" secondItem="Cej-l8-jl4" secondAttribute="width" id="x0c-MF-B3Q"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vaf-2I-vkb" userLabel="Update Word Button" customClass="CornerRadiusView" customModule="Hangman" customModuleProvider="target">
+                                <rect key="frame" x="117" y="348" width="141" height="43.5"/>
+                                <color key="backgroundColor" red="0.68077007089999997" green="0.79920559820000003" blue="0.94689879440000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vaf-2I-vkb" secondAttribute="height" multiplier="65:20" id="rG1-y3-UHH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="updateButtonPressed:" destination="3nT-C2-ijR" eventType="touchUpInside" id="EWe-4L-A9u"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hangman1" translatesAutoresizingMaskIntoConstraints="NO" id="2Up-BL-7d4" userLabel="HangmanImage">
+                                <rect key="frame" x="44" y="28" width="301" height="297"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2Up-BL-7d4" firstAttribute="leading" secondItem="2K0-Kt-4aW" secondAttribute="leadingMargin" constant="28" id="2Df-35-1BQ"/>
+                            <constraint firstItem="Tfe-4t-Vbr" firstAttribute="top" secondItem="vaf-2I-vkb" secondAttribute="bottom" constant="20" id="Eey-bI-HdV"/>
+                            <constraint firstItem="vaf-2I-vkb" firstAttribute="top" secondItem="2Up-BL-7d4" secondAttribute="bottom" constant="23" id="JqD-70-86y"/>
+                            <constraint firstItem="Tfe-4t-Vbr" firstAttribute="centerX" secondItem="2K0-Kt-4aW" secondAttribute="centerX" id="MMZ-lt-4TG"/>
+                            <constraint firstItem="Tfe-4t-Vbr" firstAttribute="leading" secondItem="2K0-Kt-4aW" secondAttribute="leadingMargin" id="PR4-bf-KT5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Up-BL-7d4" secondAttribute="trailing" constant="14" id="SGX-Sr-9oz"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="tgN-hw-eMb" secondAttribute="bottom" constant="10" id="ZAz-PZ-jcL"/>
+                            <constraint firstItem="2Up-BL-7d4" firstAttribute="top" secondItem="yWr-HV-MRc" secondAttribute="bottom" constant="8" symbolic="YES" id="bhX-6Y-Dwr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tfe-4t-Vbr" secondAttribute="trailing" id="bnw-VI-EHl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tgN-hw-eMb" secondAttribute="trailing" id="f5T-vD-KND"/>
+                            <constraint firstItem="tgN-hw-eMb" firstAttribute="top" secondItem="Tfe-4t-Vbr" secondAttribute="bottom" constant="10" id="hMa-QZ-n5o"/>
+                            <constraint firstItem="vaf-2I-vkb" firstAttribute="height" secondItem="Cej-l8-jl4" secondAttribute="height" id="kH1-yI-SU6"/>
+                            <constraint firstItem="tgN-hw-eMb" firstAttribute="leading" secondItem="2K0-Kt-4aW" secondAttribute="leadingMargin" id="pTF-CJ-5zQ"/>
+                            <constraint firstItem="vaf-2I-vkb" firstAttribute="centerX" secondItem="2K0-Kt-4aW" secondAttribute="centerX" id="tKt-dH-eRz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="HangmanImage" destination="2Up-BL-7d4" id="hvv-8P-Vv8"/>
+                        <outlet property="underlineview" destination="WEt-dw-rC5" id="sTA-Ah-3Hb"/>
+                        <outlet property="updatewordButton" destination="vaf-2I-vkb" id="q9T-qv-irx"/>
+                        <outlet property="wordstackview" destination="7Ps-oH-Crq" id="wu2-oq-6kn"/>
+                        <outletCollection property="letters" destination="OWs-Nr-EfZ" collectionClass="NSMutableArray" id="TXc-9y-Q5M"/>
+                        <outletCollection property="letters" destination="4AF-us-vlf" collectionClass="NSMutableArray" id="s0I-ei-q61"/>
+                        <outletCollection property="letters" destination="Vam-U2-zPk" collectionClass="NSMutableArray" id="dHL-ge-3Nn"/>
+                        <outletCollection property="letters" destination="CHc-Ye-5ng" collectionClass="NSMutableArray" id="dVe-a5-Edm"/>
+                        <outletCollection property="letters" destination="xgM-dm-Hfg" collectionClass="NSMutableArray" id="evl-ss-Kzh"/>
+                        <outletCollection property="letters" destination="Cej-l8-jl4" collectionClass="NSMutableArray" id="zIu-Kw-iuu"/>
+                        <outletCollection property="letters" destination="e6V-FG-szC" collectionClass="NSMutableArray" id="Cfx-Q5-HDU"/>
+                        <outletCollection property="letters" destination="UA2-qe-Yzx" collectionClass="NSMutableArray" id="2l0-Lb-WAA"/>
+                        <outletCollection property="letters" destination="kDg-uv-syU" collectionClass="NSMutableArray" id="qug-yb-hO7"/>
+                        <outletCollection property="letters" destination="f7Z-7m-KDx" collectionClass="NSMutableArray" id="Pdn-V3-Da3"/>
+                        <outletCollection property="letters" destination="aBc-bs-7Gv" collectionClass="NSMutableArray" id="zea-RM-6fC"/>
+                        <outletCollection property="letters" destination="Fsa-dj-JJL" collectionClass="NSMutableArray" id="Knj-JO-9kv"/>
+                        <outletCollection property="letters" destination="fhj-ru-AxC" collectionClass="NSMutableArray" id="EQp-zz-ZIk"/>
+                        <outletCollection property="letters" destination="m8v-R4-ECh" collectionClass="NSMutableArray" id="Cvx-Cs-sHo"/>
+                        <outletCollection property="letters" destination="Qys-K1-XBE" collectionClass="NSMutableArray" id="qwm-FN-VNJ"/>
+                        <outletCollection property="letters" destination="cBE-tz-zwJ" collectionClass="NSMutableArray" id="06h-GV-fCM"/>
+                        <outletCollection property="letters" destination="VtH-Dc-3fH" collectionClass="NSMutableArray" id="JO8-SO-kLy"/>
+                        <outletCollection property="letters" destination="uRn-ib-0Cx" collectionClass="NSMutableArray" id="u8d-Mt-sOY"/>
+                        <outletCollection property="letters" destination="l7q-w6-XjH" collectionClass="NSMutableArray" id="MvR-zK-9iO"/>
+                        <outletCollection property="letters" destination="ViP-fG-Ok2" collectionClass="NSMutableArray" id="HVb-1h-qKI"/>
+                        <outletCollection property="letters" destination="Fip-9G-pgc" collectionClass="NSMutableArray" id="END-yn-NzW"/>
+                        <outletCollection property="letters" destination="tOH-h7-8RX" collectionClass="NSMutableArray" id="EDu-Oh-lC3"/>
+                        <outletCollection property="letters" destination="XFH-Lx-wrc" collectionClass="NSMutableArray" id="1fi-TI-r0b"/>
+                        <outletCollection property="letters" destination="gHj-QV-SNX" collectionClass="NSMutableArray" id="Ovo-cv-XDn"/>
+                        <outletCollection property="letters" destination="1iW-8Q-n9d" collectionClass="NSMutableArray" id="ucI-8n-Meo"/>
+                        <outletCollection property="letters" destination="aBi-IK-BHr" collectionClass="NSMutableArray" id="lXV-5c-6Gn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v5F-6m-MhS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-327.19999999999999" y="2019.9400299850076"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hangman1" width="200" height="200"/>
+    </resources>
 </document>
